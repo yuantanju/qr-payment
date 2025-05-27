@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment via QR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    img.qr {
+      width: 100%;
+      max-width: 300px;
+      margin: 20px 0;
+    }
+    h2 {
+      color: #333;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #666;
+    }
+    .open-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .open-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h2>Complete Your Payment</h2>
+  <p>Any e-wallet is available to pay using this QR code</p>
+  <h3>KING OF SCANDAL PH</h3>
+
+  <!-- Dito yung image -->
+  <img src="qr.jpg" alt="Payment QR Code" class="qr" />
+  <p class="note">Scan the QR code using any e-wallet app<br>(Maya, GCash, SeaBank, GoTyme, etc.)</p>
+
+  <button class="open-button" onclick="openGCash()">Open GCash</button>
+</div>
+lass="open-button" onclick="openGCash()">Open GCash</button>
+  </div>
+
+  <script>
+    function openGCash() {
+      // Try to open GCash via deep link
+      window.location.href = "gcash://";
+      
+      // Optional fallback (if deep link fails, nothing will happen)
+      setTimeout(function () {
+        alert("If GCash didn't open, please open it manually.");
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
