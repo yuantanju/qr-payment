@@ -59,6 +59,11 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
     }
 
     .note {
@@ -71,10 +76,17 @@
       margin-right: auto;
     }
 
-    h2, p, h3 {
+    h2, p {
       margin: 0;
       margin-bottom: 8px;
       color: #333;
+    }
+
+    h3 {
+      margin: 0;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
     }
 
     p.description {
@@ -85,8 +97,8 @@
 
     @media (max-width: 480px) {
       .container {
-        max-width: 92vw;
-        padding: 25px 18px 30px;
+        max-width: 95vw; /* increased max width */
+        padding: 40px 25px 40px; /* increased padding */
       }
 
       img.qr {
@@ -95,10 +107,23 @@
 
       .open-button {
         width: 100%;
+        font-size: 19px; /* slightly bigger font */
+        padding: 16px 25px;
+        height: 54px;
+      }
+
+      .save-qr {
+        font-size: 13px; /* slightly bigger font */
+        padding: 7px 16px;
       }
 
       .note {
         max-width: 100%;
+        font-size: 0.9em; /* slightly bigger */
+      }
+
+      p.description {
+        font-size: 1.1em;
       }
     }
   </style>
